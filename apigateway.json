@@ -17,19 +17,6 @@
               "method": "GET"
             }
           ]
-        },
-        {
-          "endpoint": "/api/pong",
-          "output_encoding": "json",
-          "backend": [
-            {
-              "host": [
-                "http://deployment-name.namespaces:port"
-              ],
-              "url_pattern": "/pong",
-              "method": "GET"
-            }
-          ]
         }
       ]
     }
