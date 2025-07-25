@@ -1,1 +1,35 @@
-
+    {
+      "version": 3,
+      "port": 8080,
+      "name": "KrakenD API Gateway",
+      "cache_ttl": "3600s",
+      "timeout": "3000ms",
+      "endpoints": [
+        {
+          "endpoint": "/apiv1/health",
+          "output_encoding": "json",
+          "backend": [
+            {
+              "host": [
+                "http://stable-app-v1:8000"
+              ],
+              "url_pattern": "/health",
+              "method": "GET"
+            }
+          ]
+        },
+        {
+          "endpoint": "/api/pong",
+          "output_encoding": "json",
+          "backend": [
+            {
+              "host": [
+                "http://deployment-name.namespaces:port"
+              ],
+              "url_pattern": "/pong",
+              "method": "GET"
+            }
+          ]
+        }
+      ]
+    }
