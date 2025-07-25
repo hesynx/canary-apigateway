@@ -11,7 +11,7 @@
           "backend": [
             {
               "host": [
-                "http://stable-app-v1:8000"
+                "http://canary-app-v1:8000"
               ],
               "url_pattern": "/health",
               "method": "GET"
